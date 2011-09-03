@@ -1,5 +1,6 @@
 set guioptions=cMg
 set lazyredraw
+let &guicursor = &guioptions . ',a:blinkon0'
 
 map <silent> <F11> :if &guioptions =~# 'T' <Bar>
     \ set guioptions-=T <Bar>
