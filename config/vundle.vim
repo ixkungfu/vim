@@ -14,6 +14,7 @@ Bundle github . 'plasticboy/vim-markdown'
 Bundle github . 'pangloss/vim-javascript'
 Bundle github . 'vim-scripts/jQuery'
 Bundle github . 'tpope/vim-git'
+Bundle github . 'othree/html5.vim'
 
 " Color Schemes:
 Bundle github . 'tomasr/molokai'
