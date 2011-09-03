@@ -10,6 +10,7 @@ vnoremap k gk
 
 " Esc
 inoremap <leader>, <esc>
+nnoremap <leader>q :q!<esc>
 
 " Search
 nnoremap <silent><leader><space> :set nohls!<cr>
