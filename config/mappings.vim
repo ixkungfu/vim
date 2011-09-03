@@ -1,6 +1,5 @@
 " Key mappings " {{{
 let mapleader = ','
-let g:mapleader = ','
 
 " Arrow keys
 nnoremap j gj
@@ -8,9 +7,17 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-" Esc
+" Quickly edit/reload the vimrc file
+noremap <silent><leader>ev :tabedit $MYVIMRC<cr>
+noremap <silent><leader>sv :source $MYVIMRC<cr>
+
+" Sudo to write
+cmap w!! w !sudo tee % > /dev/null
+
+" Esc and Save
 inoremap <leader>, <esc>
 nnoremap <leader>q :q!<esc>
+nnoremap <c-s> :w<cr>
 
 " Search
 nnoremap <silent><leader><space> :set nohls!<cr>
