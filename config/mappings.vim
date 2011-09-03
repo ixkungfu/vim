@@ -52,8 +52,8 @@ vnoremap <tab> >gv
 vnoremap <s-tab> <gv
 
 " Line Number
-noremap <silent><F2> :if &nu\|se nu!\
-            \|elsei &rnu\|se nu\
-            \|el\|se rnu\|endif<cr>
+noremap <silent><F2> :if &nu\|se rnu\
+            \|elsei &rnu\|se rnu!\
+            \|el\|se nu\|endif<cr>
 
 " "}}}
