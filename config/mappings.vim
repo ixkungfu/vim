@@ -5,6 +5,8 @@ let g:mapleader = ','
 " Arrow keys
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " Esc
 inoremap <leader>, <esc>
@@ -12,6 +14,8 @@ inoremap <leader>, <esc>
 " Search
 nnoremap <silent><leader><space> :set nohls!<cr>
 nnoremap <silent><leader>l :let @/=""<cr>
+vnoremap * y/<c-r>=escape(@", '\\/.*$^~[]')<cr><cr>
+vnoremap # y?<c-r>=escape(@", '\\/.*$^~[]')<cr><cr>
 
 " Command Mode like terminal command
 cmap <c-a> <home>
@@ -40,5 +44,16 @@ map <c-kPlus> <c-w>+
 map <c-kMinus> <c-w>-
 map <s-left> <c-w><
 map <s-right> <c-w>>
+
+" Indent
+noremap <tab> v>
+noremap <s-tab> v<
+vnoremap <tab> >gv
+vnoremap <s-tab> <gv
+
+" Line Number
+noremap <silent><F2> :if &nu\|se nu!\
+            \|elsei &rnu\|se nu\
+            \|el\|se rnu\|endif<cr>
 
 " "}}}
