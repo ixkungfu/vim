@@ -69,6 +69,7 @@ set mousehide
 
 set matchtime=2
 
+set linebreak
 set nonumber
 set textwidth=80
 set colorcolumn=+1
