@@ -14,20 +14,24 @@ set autowrite
 set autoread
 set autochdir
 
-set undofile
-set undoreload=256
 set history=256
+set undoreload=256
+set undofile
+
+set hidden
+
+" Backup
 set nobackup
 set nowritebackup
 set noswapfile
 let &undodir=g:KF#MYVIM . "/tmp/und"
 
-set hidden
-
+" Search
 set magic
 set hlsearch
 set smartcase
 set incsearch
+set wrapscan
 
 set matchpairs+=<:>
 
@@ -39,16 +43,20 @@ set fo+=o
 set fo-=r
 set fo-=t
 
+" Edit
 set autoindent
 set cindent
+set smartindent
+set shiftround
+set backspace=indent,eol,start
+set showmatch
+
+" Tab
 set smarttab
 set expandtab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-set shiftround
-
-set backspace=indent,eol,start
 
 set nowrap
 " "}}}
@@ -60,9 +68,8 @@ set mouse=a
 set mousehide
 
 set matchtime=2
-set showmatch
 
-set number
+set nonumber
 set textwidth=80
 set colorcolumn=+1
 
@@ -70,6 +77,7 @@ set wildmode=longest,list
 
 set completeopt+=preview
 
+" Bell
 set novisualbell
 set noerrorbells
 set vb t_vb=
@@ -78,6 +86,7 @@ set laststatus=2
 set shortmess=atI
 set showcmd
 
+" Scroll
 set scrolloff=3
 set sidescrolloff=3
 if &diff && has('cursorbind')
