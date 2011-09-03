@@ -28,6 +28,7 @@ cnoremap <c-d> <del>
 
 " Tabs
 nnoremap <leader>lt :tabs<cr>
+nnoremap <leader>tt :tabnew<cr>
 nnoremap <leader>n :silent tabprev<cr>
 nnoremap <leader>m :silent tabnext<cr>
 nnoremap <leader>tf :silent tabfirst<cr>
