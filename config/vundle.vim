@@ -13,6 +13,8 @@ Bundle github . 'vim-scripts/jQuery'
 Bundle github . 'tpope/vim-git'
 
 " Color Schemes:
+Bundle github . 'tomasr/molokai'
+Bundle github . 'vim-scripts/robokai'
 Bundle github . 'tpope/vim-vividchalk'
 Bundle github . 'wgibbs/vim-irblack'
 Bundle github . 'altercation/vim-colors-solarized'
