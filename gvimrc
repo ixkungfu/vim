@@ -1,4 +1,5 @@
 set guioptions=cMg
+set lazyredraw
 
 map <silent> <F11> :if &guioptions =~# 'T' <Bar>
     \ set guioptions-=T <Bar>
