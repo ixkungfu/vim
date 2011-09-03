@@ -1,7 +1,6 @@
 " General " {{{
 
-set ttyfast
-set timeoutlen=250
+set timeoutlen=500
 set clipboard+=unnamed
 set pastetoggle=<F3>
 
@@ -50,6 +49,7 @@ set smartindent
 set shiftround
 set backspace=indent,eol,start
 set showmatch
+set display=lastline
 
 " Tab
 set smarttab
@@ -73,6 +73,7 @@ set nonumber
 set textwidth=80
 set colorcolumn=+1
 
+set wildmenu
 set wildmode=longest,list
 
 set completeopt+=preview
@@ -110,26 +111,29 @@ set splitbelow
 set splitright
 
 set list
-set listchars=tab:\ ·,eol:¬
-set listchars+=trail:·
-set listchars+=extends:»,precedes:«
+"set listchars=tab:\ ·,eol:¬
+"set listchars+=trail:·
+"set listchars+=extends:»,precedes:«
 map <silent> <F4> :set invlist<CR>
 
 set helplang=cn,en
 
+" Encoding
 set nobomb
 set fileformat=unix
 set fileformats=unix,mac,dos
 set encoding=utf-8
+set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gbk,gb2312
 set fencs+=gb18030,big5,cp936,chinese
 set fencs+=euc-jp,euc-kr,latin1
-"set ambiwidth=double
+set langmenu=zh_CN.utf-8
+set ambiwidth=double
+language messages zh_CN.utf-8
 
 if g:KF#OS == 3
     source $VIMRUNTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim
-    language messages zh_CN.utf-8
 endif
 " "}}}

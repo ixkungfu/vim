@@ -1,5 +1,10 @@
 " Runtime Configs: {{{
 set nocompatible
+
+if &term =~ 'xterm'
+    runtime config/term.vim
+endif
+
 runtime config/personal.vim
 runtime config/basic.vim
 runtime config/mappings.vim
