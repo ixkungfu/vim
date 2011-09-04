@@ -1,6 +1,8 @@
 set guioptions=cMg
 set lazyredraw
-let &guicursor = &guioptions . ',a:blinkon0'
+set guicursor+=a:blinkon0
+set langmenu=zh_CN.utf-8
+set mousemodel=popup
 
 map <silent> <F11> :if &guioptions =~# 'T' <Bar>
     \ set guioptions-=T <Bar>

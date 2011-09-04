@@ -8,8 +8,8 @@ vnoremap j gj
 vnoremap k gk
 
 " Quickly edit/reload the vimrc file
-noremap <silent><leader>ev :tabedit $MYVIMRC<cr>
-noremap <silent><leader>sv :source $MYVIMRC<cr>
+nnoremap <silent><leader>ev :tabedit $MYVIMRC<cr>
+nnoremap <silent><leader>sv :source $MYVIMRC<cr>
 
 " Sudo to write
 cmap w!! w !sudo tee % > /dev/null
@@ -17,7 +17,7 @@ cmap w!! w !sudo tee % > /dev/null
 " Esc and Save
 inoremap <leader>, <esc>
 nnoremap <leader>q :q!<esc>
-nnoremap <c-s> :w<cr>
+nnoremap <c-s> :update<cr>
 
 " Search
 nnoremap <silent><leader><space> :set nohls!<cr>
@@ -26,13 +26,17 @@ vnoremap * y/<c-r>=escape(@", '\\/.*$^~[]')<cr><cr>
 vnoremap # y?<c-r>=escape(@", '\\/.*$^~[]')<cr><cr>
 
 " Command Mode like terminal command
-cmap <c-a> <home>
-cmap <c-e> <end>
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
 cnoremap <c-p> <up>
 cnoremap <c-f> <right>
 cnoremap <c-n> <down>
 cnoremap <c-b> <left>
 cnoremap <c-d> <del>
+
+" Move Lines
+noremap <c-up> mz:m-2<cr>`z
+noremap <c-down> mz:m+<cr>`z
 
 " Tabs
 nnoremap <leader>lt :tabs<cr>
@@ -43,10 +47,10 @@ nnoremap <leader>tf :silent tabfirst<cr>
 nnoremap <leader>tl :silent tablast<cr>
 
 " Move Windoes
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-j> <c-w>j
-map <c-h> <c-w>h
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
 
 " <c-0> rest
 map <c-kPlus> <c-w>+

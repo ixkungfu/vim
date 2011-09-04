@@ -75,7 +75,7 @@ set textwidth=80
 set colorcolumn=+1
 
 set wildmenu
-set wildmode=longest,list
+set wildmode=longest:full,full
 
 set completeopt+=preview
 
@@ -129,7 +129,6 @@ set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gbk,gb2312
 set fencs+=gb18030,big5,cp936,chinese
 set fencs+=euc-jp,euc-kr,latin1
-set langmenu=zh_CN.utf-8
 set ambiwidth=double
 language messages zh_CN.utf-8
 
