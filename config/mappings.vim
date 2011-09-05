@@ -73,9 +73,9 @@ noremap <silent><F2> :if &nu\|se rnu\
             \|elsei &rnu\|se rnu!\
             \|el\|se nu\|endif<cr>
 
-
+" Trim tailling whitespace
 function TrimWhiteSpace()
-    %s/\s*$//
+    %s/\s\+$//
 endfunction
 
 noremap <silent><F7> :call TrimWhiteSpace()<cr>
