@@ -34,6 +34,10 @@ cnoremap <c-n> <down>
 cnoremap <c-b> <left>
 cnoremap <c-d> <del>
 
+" Cursor
+" <s-i> line begin and insert
+nnoremap L $
+
 " Move Lines
 noremap <c-up> mz:m-2<cr>`z
 noremap <c-down> mz:m+<cr>`z
@@ -69,4 +73,10 @@ noremap <silent><F2> :if &nu\|se rnu\
             \|elsei &rnu\|se rnu!\
             \|el\|se nu\|endif<cr>
 
+
+function TrimWhiteSpace()
+    %s/\s*$//
+endfunction
+
+noremap <silent><F7> :call TrimWhiteSpace()<cr>
 " "}}}
