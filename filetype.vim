@@ -14,6 +14,9 @@ augroup filetypedetect
     au BufNewFile,BufRead *.vim setf vim
 
     " JavaScript, ECMAScript
-    au BufNewFile,BufRead *.js,*.javascript,*.es,*.jsx setf javascript
+    au BufNewFile,BufRead *.{js,javascript,es,jsx} setf javascript
+
+    " Markdown
+    au BufNewFile,BufRead *.{md,mkd} setf mkd
 
 augroup END
