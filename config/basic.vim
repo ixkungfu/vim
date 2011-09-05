@@ -111,7 +111,7 @@ set equalalways
 set splitbelow
 set splitright
 
-set list
+"set list
 "set listchars=tab:\ ·,eol:¬
 "set listchars+=trail:·
 "set listchars+=extends:»,precedes:«
