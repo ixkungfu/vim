@@ -3,7 +3,7 @@ call vundle#rc()
 
 com -nargs=1 -bang -complete=custom,Bithub Bithub Bundle<bang><args>
 fun Bithub(A,L,P)
-    return 'https://github.com/' . a:A
+    return 'git://github.com/' . a:A
 endfun
 
 " My Bundles: {
