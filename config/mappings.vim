@@ -69,6 +69,9 @@ noremap <s-tab> v<
 vnoremap <tab> >gv
 vnoremap <s-tab> <gv
 
+" ListChar
+noremap <silent><F4> :set invlist<CR>
+
 " Line Number
 noremap <silent><F2> :if &nu\|se rnu\
             \|elsei &rnu\|se rnu!\

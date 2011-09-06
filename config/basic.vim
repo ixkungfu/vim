@@ -116,7 +116,6 @@ set splitright
 "set listchars=tab:\ ·,eol:¬
 "set listchars+=trail:·
 "set listchars+=extends:»,precedes:«
-map <silent> <F4> :set invlist<CR>
 
 set helplang=cn,en
 
