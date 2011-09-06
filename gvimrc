@@ -15,6 +15,9 @@ map <silent> <F11> :if &guioptions =~# 'T' <Bar>
 if g:KF#OS == 1
 elseif g:KF#OS == 2
 elseif g:KF#OS == 3
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
+
     autocmd GUIEnter * simalt ~x
     set guifont=Monaco:h10:cANSI
     set guifontwide=YaHei\ Mono:h10

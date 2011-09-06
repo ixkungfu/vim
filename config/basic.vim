@@ -132,8 +132,4 @@ set fencs+=euc-jp,euc-kr,latin1
 set ambiwidth=double
 language messages zh_CN.utf-8
 
-if g:KF#OS == 3
-    source $VIMRUNTIME/delmenu.vim
-    source $VIMRUNTIME/menu.vim
-endif
 " "}}}
