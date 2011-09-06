@@ -74,5 +74,5 @@ noremap <silent><F2> :if &nu\|se rnu\
             \|el\|se nu\|endif<cr>
 
 " Trim trailling whitespace
-noremap <silent><F7> :%s/\s\+$//g<cr>
+noremap <silent><F7> :%s/\s\+$//g<cr>``
 " "}}}
