@@ -70,7 +70,7 @@ vnoremap <tab> >gv
 vnoremap <s-tab> <gv
 
 " ListChar
-noremap <silent><F4> :set invlist<CR>
+noremap <silent><F4> :set invlist<cr>
 
 " Line Number
 noremap <silent><F2> :if &nu\|se rnu\
