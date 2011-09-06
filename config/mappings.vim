@@ -16,6 +16,7 @@ cmap w!! w !sudo tee % > /dev/null
 
 " Esc and Save
 inoremap <leader>, <esc>
+vnoremap <leader>, <esc>
 nnoremap <leader>q :q!<esc>
 nnoremap <c-s> :update<cr>
 

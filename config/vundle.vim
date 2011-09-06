@@ -1,10 +1,9 @@
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-com -nargs=1 -bang -complete=custom,Bithub Bithub Bundle<bang> <args>
+com -nargs=1 -bang -complete=custom,Bithub Bithub Bundle<bang><args>
 fun Bithub(A,L,P)
-    let github = 'https://github.com/'
-    return github . a:A
+    return 'https://github.com/' . a:A
 endfun
 
 " My Bundles: {
@@ -12,6 +11,11 @@ Bithub 'gmarik/vundle'
 
 " Explorer:
 Bithub 'scrooloose/nerdtree'
+nnoremap <silent><F10> :NERDTreeToggle<cr>
+
+" Comment:
+Bithub 'scrooloose/nerdcommenter'
+nnoremap <c-_> <plug>NERDCommenterToggle<cr>
 
 " Task:
 Bithub 'framallo/taskwarrior.vim'
