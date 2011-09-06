@@ -1,27 +1,40 @@
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-let github = 'https://github.com/'
+com -nargs=1 -bang -complete=custom,Bithub Bithub Bundle<bang> <args>
+fun Bithub(A,L,P)
+    let github = 'https://github.com/'
+    return github . a:A
+endfun
 
 " My Bundles: {
-Bundle github . 'gmarik/vundle'
+Bithub 'gmarik/vundle'
 
 " Explorer:
-Bundle github . 'scrooloose/nerdtree'
+Bithub 'scrooloose/nerdtree'
+
+" Task:
+Bithub 'framallo/taskwarrior.vim'
+
+" Search Tools:
+Bithub 'mileszs/ack.vim'
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+" Quoting Or Parenthesizing:
+Bithub 'tpope/vim-surround'
 
 " Syntax Files:
-Bundle github . 'plasticboy/vim-markdown'
-Bundle github . 'pangloss/vim-javascript'
-Bundle github . 'vim-scripts/jQuery'
-Bundle github . 'tpope/vim-git'
-Bundle github . 'othree/html5.vim'
+Bithub 'plasticboy/vim-markdown'
+Bithub 'pangloss/vim-javascript'
+Bithub 'vim-scripts/jQuery'
+Bithub 'tpope/vim-git'
+Bithub 'othree/html5.vim'
 
 " Color Schemes:
-Bundle github . 'tomasr/molokai'
-Bundle github . 'vim-scripts/robokai'
-Bundle github . 'tpope/vim-vividchalk'
-Bundle github . 'wgibbs/vim-irblack'
-Bundle github . 'altercation/vim-colors-solarized'
+Bithub 'tomasr/molokai'
+Bithub 'vim-scripts/robokai'
+Bithub 'tpope/vim-vividchalk'
+Bithub 'wgibbs/vim-irblack'
+Bithub 'altercation/vim-colors-solarized'
 
-unlet github
 " }
