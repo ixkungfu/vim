@@ -14,7 +14,7 @@ augroup filetypedetect
     au BufNewFile,BufRead *.sh setf sh
 
     " Vim
-    au BufNewFile,BufRead *.vim setf vim
+    au BufNewFile,BufRead *.vim,vimrc,gvimrc setf vim
 
     " JavaScript, ECMAScript
     au BufNewFile,BufRead *.{js,javascript,es,jsx} setf javascript
