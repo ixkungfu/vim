@@ -72,6 +72,7 @@ set matchtime=2
 set linebreak
 set nonumber
 set textwidth=80
+set cursorline
 set colorcolumn=+1
 
 set wildmenu
