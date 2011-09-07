@@ -7,6 +7,16 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
+" Useful Shortcuts
+vnoremap <leader>c "+y
+vnoremap <leader>x "+d
+nnoremap <leader>v "+P
+vnoremap <leader>v "+p
+nnoremap <leader>a ggVG
+
+" Backspace in Visual mode deletes selection
+vnoremap <BS> d
+
 " Quickly edit/reload the vimrc file
 nnoremap <silent><leader>ev :tabedit $MYVIMRC<cr>
 nnoremap <silent><leader>sv :source $MYVIMRC<cr>
@@ -38,6 +48,10 @@ cnoremap <c-d> <del>
 " Cursor
 " <s-i> line begin and insert
 nnoremap L $
+
+" Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
+" which is the default
+nnoremap Y y$
 
 " Move Lines
 noremap <c-up> mz:m-2<cr>`z
