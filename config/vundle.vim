@@ -15,7 +15,7 @@ nnoremap <silent><F10> :NERDTreeToggle<cr>
 
 " Comment:
 Bithub 'scrooloose/nerdcommenter'
-nnoremap <c-_> <plug>NERDCommenterToggle<cr>
+nnoremap <c-/> :NERDCommenterToggle<cr>
 
 " Task:
 Bithub 'framallo/taskwarrior.vim'

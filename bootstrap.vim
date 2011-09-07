@@ -12,8 +12,14 @@ runtime config/personal.vim
 runtime config/basic.vim
 runtime config/mappings.vim
 runtime config/style.vim
+runtime config/plugins.vim
 filetype off
 
-runtime config/vundle.vim
+"if g:KF#OS != 3
+"    runtime config/vundle.vim
+"else
+    runtime config/pathogen.vim
+"endif
+
 filetype plugin indent on
 " }}}
