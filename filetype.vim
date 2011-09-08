@@ -5,11 +5,6 @@ let did_load_filetypes = 1
 
 augroup filetypedetect
 
-    autocmd BufReadPost *
-        \ if line("'\"") > 0 && line("'\"") <= line("$") |
-        \ exe "normal g`\"" |
-        \ endif
-
     " SH
     au BufNewFile,BufRead *.sh setf sh
 
@@ -20,7 +15,7 @@ augroup filetypedetect
     au BufNewFile,BufRead *.{js,javascript,es,jsx} setf javascript
 
     " Markdown
-    au BufNewFile,BufRead *.{md,mkd} setf mkd
+    au BufNewFile,BufRead *.{md,mkd,mark,markdown} setf mkd
 
     " Taskwarrior data files
     au BufNewFile,BufRead {pending,completed,undo}.data setf taskdata
