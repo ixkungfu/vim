@@ -31,7 +31,7 @@ if g:KF#OS == 1
 elseif g:KF#OS == 2
     "let g:KF#MYVIM = 1
 else
-    let g:KF#MYVIM = expand('F:/opensources/vim')
+    let g:KF#MYVIM = expand('F:/develop/vim')
 endif
 " }
 
