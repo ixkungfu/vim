@@ -2,6 +2,7 @@
 let mapleader = ','
 
 " Arrow keys
+nnoremap Q gq
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
