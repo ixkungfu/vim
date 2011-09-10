@@ -94,4 +94,6 @@ noremap <silent><F2> :if &nu\|se rnu\
 
 " Trim trailling whitespace
 noremap <silent><F7> :%s/\s\+$//g<cr>``
+
+" normal: 3id, insert ddd. :help .
 " "}}}
