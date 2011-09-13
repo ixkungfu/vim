@@ -1,4 +1,3 @@
-set guioptions=cMg
 set lazyredraw
 set guicursor+=a:blinkon0
 set langmenu=zh_CN.utf-8
@@ -13,8 +12,14 @@ map <silent> <F11> :if &guioptions =~# 'T' <Bar>
     \ endif<cr>
 
 if g:KF#OS == 1
+    set guioptions=cMg
 elseif g:KF#OS == 2
+
+    set transparency=8
+    set guifont=Monaco:h14
+
 elseif g:KF#OS == 3
+    set guioptions=cMg
     source $VIMRUNTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim
 
