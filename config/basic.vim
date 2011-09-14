@@ -116,6 +116,8 @@ set splitright
 "set listchars=tab:\ ·,eol:¬
 "set listchars+=trail:·
 "set listchars+=extends:»,precedes:«
+set background=dark
+colorscheme molokai
 
 set helplang=cn,en
 
