@@ -5,10 +5,14 @@ let did_load_filetypes = 1
 
 augroup filetypedetect
 
+    " C
     au BufNewFile,BufRead *.c setf c
 
     " Markdown
     au BufNewFile,BufRead *.{md,mkd,mark,markdown} setf mkd
+
+    " PHP
+    au BufNewFile,BufRead *.php setf php
 
     " SH
     au BufNewFile,BufRead *.sh setf sh
