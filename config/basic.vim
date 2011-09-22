@@ -112,10 +112,28 @@ set equalalways
 set splitbelow
 set splitright
 
+" Insert mode completion options
+set completeopt=menu
+" Configure complete options to complete
+set complete=
+" from current buffer
+set complete+=.
+" from other opened bufers
+set complete+=b
+" from tags
+set complete+=t
+" from dictionary
+set complete+=k
+" from included files
+set complete+=i
+" Enable CTRL-A/CTRL-X to work on octal and hex numbers, as well as characters
+set nrformats=octal,hex,alpha
+
 "set list
 "set listchars=tab:\ ·,eol:¬
 "set listchars+=trail:·
 "set listchars+=extends:»,precedes:«
+set listchars=tab:▸\ ,eol:¬
 set background=dark
 
 set helplang=cn,en

@@ -7,18 +7,24 @@ augroup filetypedetect
 
     " C
     au BufNewFile,BufRead *.c setf c
+    au filetype c setlocal omnifunc=ccomplete#Complete
 
     " Markdown
     au BufNewFile,BufRead *.{md,mkd,mark,markdown} setf mkd
+    au filetype html,mkd setlocal omnifunc=htmlcomplete#CompleteTags
 
     " PHP
     au BufNewFile,BufRead *.php setf php
+    au filetype php s:Dict('php')
+    au filetype php setlocal omnifunc=phpcomplete#CompletePHP
 
     " SH
     au BufNewFile,BufRead *.sh setf sh
 
     " JavaScript, ECMAScript
     au BufNewFile,BufRead *.{js,javascript,es,jsx} setf javascript
+    au filetype javascript call s:Dict('javascript')
+    au filetype javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
     " Taskwarrior configuration file
     au BufNewFile,BufRead .taskrc setf taskrc
@@ -32,4 +38,15 @@ augroup filetypedetect
     " Vim
     au BufNewFile,BufRead *.vim,{*}vimrc,{*}gvimrc setf vim
 
+    " Enable omni completion.
+    au filetype css setlocal omnifunc=csscomplete#CompleteCSS
+    au filetype python setlocal omnifunc=pythoncomplete#Complete
+    "au filetype ruby setlocal omnifunc=rubycomplete#Complete
+    "au filetype sql setlocal omnifunc=sqlcomplete#Complete
+    au filetype xml setlocal omnifunc=xmlcomplete#CompleteTags
+
 augroup END
+
+fun! s:Dict(ft)
+    let &dictionary = substitute(g:KF#MYVIM . '/dict/@.dict', '@', a:ft, '')
+endfun
