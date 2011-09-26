@@ -2,6 +2,7 @@ Array
 Boolean
 Components
 DOM
+DOMContentLoaded
 DOMMouseScroll
 Date
 Error
@@ -23,6 +24,7 @@ Object
 PI
 POSITIVE_INFINITY
 RangeError
+readyState
 ReferenceError
 RegExp
 SQRT1_2
@@ -682,3 +684,9 @@ window
 with
 write
 writeln
+
+#IE
+onreadystatechage
+attachEvent
+detachEvent
+doScroll
