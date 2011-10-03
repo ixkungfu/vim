@@ -21,11 +21,12 @@ augroup filetypedetect
 
     " PHP
     au BufNewFile,BufRead *.php setf php
-    au filetype php s:Dict('php')
+    au filetype php call s:Dict('php')
     au filetype php setlocal omnifunc=phpcomplete#CompletePHP
 
     " SH
     au BufNewFile,BufRead *.sh setf sh
+    au BufNewFile,BufRead .zshrc setf zsh
 
     " JavaScript, ECMAScript
     au BufNewFile,BufRead *.{js,javascript,es,jsx} setf javascript
@@ -41,8 +42,13 @@ augroup filetypedetect
     " Taskwarrior handling of 'task 42 edit'
     au BufNewFile,BufRead *.task setf taskedit
 
+    " Nginx
+    au BufNewFile,BufRead *.nginx setl ft=nginx
+
     " Vim
-    au BufNewFile,BufRead *.vim,{*}vimrc,{*}gvimrc setf vim
+    au BufNewFile,BufRead *.vim,{*}vimrc,{*}gvimrc setf vim 
+    au BufWritePost .vimrc source $MYVIMRC
+    au BufWritePost .gvimrc source ~/.gvimrc
 
     " Enable omni completion.
     au filetype css setlocal omnifunc=csscomplete#CompleteCSS
