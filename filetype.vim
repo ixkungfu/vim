@@ -16,6 +16,9 @@ augroup filetypedetect
     au BufNewFile,BufRead *.{md,mkd,mark,markdown} setf mkd
     au filetype html,mkd setlocal omnifunc=htmlcomplete#CompleteTags
 
+    " Makefile
+    au BufNewFile,BufRead {Makefile,makefile} setf make | set noexpandtab
+
     " PHP
     au BufNewFile,BufRead *.php setf php
     au filetype php s:Dict('php')
