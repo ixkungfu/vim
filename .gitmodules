@@ -67,3 +67,12 @@
 [submodule "bundle/autumn"]
 	path = bundle/autumn
 	url = git://github.com/YorickPeterse/Autumn.vim.git
+[submodule "bundle/nginx"]
+	path = bundle/nginx
+	url = git://github.com/vim-scripts/nginx.vim.git
+[submodule "bundle/zencoding"]
+	path = bundle/zencoding
+	url = git://github.com/mattn/zencoding-vim.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git://github.com/ervandew/supertab.git
