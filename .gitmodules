@@ -79,3 +79,18 @@
 [submodule "bundle/gist"]
 	path = bundle/gist
 	url = git://github.com/mattn/gist-vim.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/taglist-plus"]
+	path = bundle/taglist-plus
+	url = git://github.com/int3/vim-taglist-plus.git
+[submodule "bundle/coffeescript"]
+	path = bundle/coffeescript
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/closetag"]
+	path = bundle/closetag
+	url = git://github.com/docunext/closetag.vim.git
