@@ -65,6 +65,8 @@ nnoremap <leader>n :silent tabprev<cr>
 nnoremap <leader>m :silent tabnext<cr>
 nnoremap <leader>tf :silent tabfirst<cr>
 nnoremap <leader>tl :silent tablast<cr>
+nnoremap <c-tab>:silent tabnext<cr>
+nnoremap <c-s-tab>:silent tabprev<cr>
 
 " Move Windoes
 nnoremap <c-k> <c-w>k

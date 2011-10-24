@@ -10,7 +10,7 @@ augroup filetypedetect
     au filetype c setlocal omnifunc=ccomplete#Complete
 
     " HTML
-    au BufNewFile,BufRead *.html setf html
+    au BufNewFile,BufRead *.html,*.mustache setf html
 
     " Markdown
     au BufNewFile,BufRead *.{md,mkd,mark,markdown} setf mkd
