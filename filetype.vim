@@ -50,8 +50,11 @@ augroup filetypedetect
     au BufWritePost .vimrc source $MYVIMRC
     au BufWritePost .gvimrc source ~/.gvimrc
 
-    " Enable omni completion.
+    " CSS
+    au BufNewFile,BufRead *.css setf css
     au filetype css setlocal omnifunc=csscomplete#CompleteCSS
+
+    " Enable omni completion.
     au filetype python setlocal omnifunc=pythoncomplete#Complete
     "au filetype ruby setlocal omnifunc=rubycomplete#Complete
     "au filetype sql setlocal omnifunc=sqlcomplete#Complete

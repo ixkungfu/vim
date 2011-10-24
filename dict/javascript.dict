@@ -684,8 +684,10 @@ window
 with
 write
 writeln
+XMLHttpRequest
 
 #IE
+ActiveXObject
 onreadystatechage
 attachEvent
 detachEvent
