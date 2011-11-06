@@ -4,7 +4,10 @@
 nnoremap <silent><F8> :NERDTreeToggle<cr>
 
 " NERDCommter
-nnoremap <a-/> <plug>NERDCommenterToggle<cr>
+if has("gui_macvim")
+    let macvim_skip_hig_shift_movement = 1
+    map <D-/> ,c<space>
+endif
 
 " Ack
 let g:ackprg = "ack-grep -H --nocolor --nogroup --column"

@@ -11,6 +11,8 @@ augroup filetypedetect
 
     " HTML
     au BufNewFile,BufRead *.html,*.mustache setf html
+    let g:javascript_enable_domhtmlcss = 1
+    let g:xml_use_xhtml = 1
 
     " Markdown
     au BufNewFile,BufRead *.{md,mkd,mark,markdown} setf mkd
@@ -32,6 +34,9 @@ augroup filetypedetect
     au BufNewFile,BufRead *.{js,javascript,es,jsx} setf javascript
     au filetype javascript call s:Dict('javascript')
     au filetype javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+
+    " Lisp
+    au BufNewFile,BufRead *.lisp setf lisp
 
     " Taskwarrior configuration file
     au BufNewFile,BufRead .taskrc setf taskrc
