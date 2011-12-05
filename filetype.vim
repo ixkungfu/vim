@@ -27,8 +27,7 @@ augroup filetypedetect
     au filetype php setlocal omnifunc=phpcomplete#CompletePHP
 
     " SH
-    au BufNewFile,BufRead *.sh setf sh
-    au BufNewFile,BufRead .zshrc setf zsh
+    au BufNewFile,BufRead *.sh,.zshrc setf sh | set ts=2 sw=2 sts=2
 
     " JavaScript, ECMAScript
     au BufNewFile,BufRead *.{js,javascript,es,jsx} setf javascript

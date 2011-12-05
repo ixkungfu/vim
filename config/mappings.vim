@@ -8,6 +8,19 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
+" Encoding
+noremap <silent> eu :set fenc=utf-8<cr>
+noremap <silent> ec :set fenc=cp932<cr>
+
+" Encode reopen Encoding
+noremap <silent> eru :e ++enc=utf-8 %<cr>
+noremap <silent> erc :e ++enc=cp932 %<cr>
+
+" redraw map
+noremap <silent> sr :redraw!<cr>
+
+noremap <silent> eo :e %:h<cr>
+
 " Useful Shortcuts
 vnoremap <leader>c "+y
 vnoremap <leader>x "+d
