@@ -1,6 +1,5 @@
 set lazyredraw
 set guicursor+=a:blinkon0
-set langmenu=zh_CN.utf-8
 set mousemodel=popup
 
 map <silent> <F11> :if &guioptions =~# 'T' <Bar>
@@ -11,14 +10,16 @@ map <silent> <F11> :if &guioptions =~# 'T' <Bar>
     \ set guioptions+=m <Bar>
     \ endif<cr>
 
-if g:KF#OS == 1
+if g:KFOS == 1
     set guioptions=cMg
-elseif g:KF#OS == 2
+elseif g:KFOS == 2
     set transparency=8
     set guifont=Monaco:h14
 
-elseif g:KF#OS == 3
+elseif g:KFOS == 3
     set guioptions=cMg
+    set langmenu=zh_CN
+    language messages zh_CN.utf-8
     source $VIMRUNTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim
 

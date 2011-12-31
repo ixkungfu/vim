@@ -21,17 +21,17 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Check OS: {
-" g:KF#OS { 'unix': 1, 'mac': 2, 'others': 3 }
+" g:KFOS { 'unix': 1, 'mac': 2, 'others': 3 }
 " tips: set let
 " set runtimepath=~/xxx eq let &runtimepath="~/xxx"
-let g:KF#OS = has('linux') ? 1 : (has('mac') || system('uname -s') =~ 'Darwin') ? 2 : 3 
-if g:KF#OS == 1
-    let g:KF#MYVIM = expand('~/.vim')
-    let g:KF#LSB = substitute(system('lsb_release -si'), '[\s\n]\+', '', '')
-elseif g:KF#OS == 2
-    let g:KF#MYVIM = expand('~/.vim')
+let g:KFOS = has('linux') ? 1 : (has('mac') || system('uname -s') =~ 'Darwin') ? 2 : 3 
+if g:KFOS == 1
+    let g:KFMYVIM = expand('~/.vim')
+    let g:KFLSB = substitute(system('lsb_release -si'), '[\s\n]\+', '', '')
+elseif g:KFOS == 2
+    let g:KFMYVIM = expand('~/.vim')
 else
-    let g:KF#MYVIM = expand('F:/develop/vim')
+    let g:KFMYVIM = expand('F:/develop/vim')
 endif
 " }
 

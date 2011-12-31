@@ -14,8 +14,9 @@ set autoread
 set autochdir
 
 set history=256
-set undoreload=256
 set undofile
+set undoreload=256
+set undolevels=1000
 
 set hidden
 
@@ -23,14 +24,14 @@ set hidden
 set nobackup
 set nowritebackup
 set noswapfile
-let &undodir=g:KF#MYVIM . "/tmp/und"
+let &undodir=g:KFMYVIM . "/und"
 
 " Search
 set magic
 set hlsearch
 set smartcase
 set incsearch
-set wrapscan
+set nowrapscan
 
 set matchpairs+=<:>
 
@@ -59,6 +60,7 @@ set tabstop=4
 set softtabstop=4
 
 set nowrap
+set display=lastline
 " "}}}
 
 " Visual "{{{
@@ -142,6 +144,11 @@ set nrformats=octal,hex,alpha
 set listchars=tab:▸\ ,eol:¬
 set background=dark
 
+"blank-空白 buffers-缓冲区 curdir-当前目录 folds-折叠 help-帮助 options-选项
+"tabpages-选项卡 winsize-窗口大小 slash-转换文件路径中的\为/以使session文件兼容unix
+"unix-设置session文件中的换行模式为unix
+set sessionoptions=blank,buffers,curdir,folds,help,options,tabpages,winsize,slash,unix,resize
+
 set helplang=cn,en
 
 " Encoding
@@ -154,7 +161,8 @@ set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gbk,gb2312
 set fencs+=gb18030,big5,cp936,chinese
 set fencs+=euc-jp,euc-kr,latin1
-set ambiwidth=double
-language messages zh_CN.utf-8
+if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
+    set ambiwidth=double
+endif
 
 " "}}}

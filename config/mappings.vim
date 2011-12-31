@@ -11,18 +11,21 @@ vnoremap k gk
 noremap / /\v
 noremap ? ?\v
 
+" undo redo undolist
+inoremap <c-z> <c-o>u
+nnoremap t <c-r>
+nnoremap <leader>ul :undolist<cr>
+
 " Encoding
-noremap <silent> eu :set fenc=utf-8<cr>
-noremap <silent> ec :set fenc=cp936<cr>
+noremap <silent>eu :set fenc=utf-8<cr>:w!<cr>
+noremap <silent>ec :set fenc=cp936<cr>:w!<cr>
 
 " Encode reopen Encoding
-noremap <silent> eru :e ++enc=utf-8 %<cr>
-noremap <silent> erc :e ++enc=cp936 %<cr>
+noremap <silent>eru :e ++enc=utf-8 %<cr>
+noremap <silent>erc :e ++enc=cp936 %<cr>
 
 " redraw map
-noremap <silent> sr :redraw!<cr>
-
-noremap <silent> eo :e %:h<cr>
+noremap <silent>sr :redraw!<cr>
 
 " Useful Shortcuts
 vnoremap <leader>c "+y
@@ -30,6 +33,15 @@ vnoremap <leader>x "+d
 nnoremap <leader>v "+P
 vnoremap <leader>v "+p
 nnoremap <leader>a ggVG
+
+" copy current path
+nnoremap <leader>p :let @*=expand('%:p:h')<cr>
+
+" Mac OSX
+if g:KFOS == 2
+    vnoremap <leader>cc y:call system("pbcopy", getreg("\""))<cr>
+    nnoremap <leader>vv :call setreg("\"",system("pbpaste"))<cr>p
+endif
 
 " Backspace in Visual mode deletes selection
 vnoremap <bs> d
@@ -54,6 +66,8 @@ nnoremap <silent><leader>l :let @/=""<cr>
 vnoremap * y/<c-r>=escape(@", '\\/.*$^~[]')<cr><cr>
 vnoremap # y?<c-r>=escape(@", '\\/.*$^~[]')<cr><cr>
 
+" Use shell with ctrl-z
+nnoremap <c-z> :shell<cr>
 " Command Mode like terminal command
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
@@ -106,19 +120,21 @@ vnoremap <s-tab> <gv
 
 " Line Number
 noremap <silent><F2> :if &nu\|se rnu\
-            \|elsei &rnu\|se rnu!\
-            \|el\|se nu\|endif<cr>
+    \|elsei &rnu\|se rnu!\
+    \|el\|se nu\|endif<cr>
 
 " ListChar
 noremap <silent><F4> :set invlist<cr>
 
-" Trim trailling whitespace
+" Trim trailling whitespace ^M
+noremap <leader>M :%s/\r//g<cr>
 noremap <silent><F7> :%s/\s\+$//g<cr>``
 
 " normal: 3id, insert ddd. :help .
 
-map <leader>d o<esc>:r!date +'\%A, \%B \%d, \%Y'<cr>:r!date +'\%A, \%B \%d, \%Y' \| sed 's/./-/g'<cr>A<cr><esc>
+map <silent><leader>d o<esc>:r!date +'\%A, \%B \%d, \%Y'<cr>\
+    \:r!date +'\%A, \%B \%d, \%Y' \| sed 's/./-/g'<cr>A<cr><esc>
 
-" Change charset by ,e
+" Change charset by ,ee
 noremap <silent><leader>ee :emenu Encoding.<tab>
 " "}}}

@@ -18,7 +18,7 @@ runtime config/command.vim
 runtime config/dict.vim
 filetype off
 
-"if g:KF#OS != 3
+"if g:KFOS != 3
 "    runtime config/vundle.vim
 "else
     runtime config/pathogen.vim

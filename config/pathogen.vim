@@ -1,2 +1,2 @@
-let &rtp = g:KF#MYVIM . '/bundle/pathogen,' . &rtp
+let &rtp = g:KFMYVIM . '/bundle/pathogen,' . &rtp
 call pathogen#infect()
