@@ -77,6 +77,12 @@ set colorcolumn=+1
 
 set wildmenu
 set wildmode=longest:full,full
+set wildcharm=<tab>
+menu Encoding.utf-8 :e ++enc=utf-8<cr>
+menu Encoding.gbk :e ++enc=gbk<cr>
+menu Encoding.gb2312 :e ++enc=gb2312<cr>
+menu Encoding.windows-1251 :e ++enc=cp1251<cr>
+menu Encoding.ibm-866 :e ++enc=ibm866<cr>
 
 set completeopt+=preview
 

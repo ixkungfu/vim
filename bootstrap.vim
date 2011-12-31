@@ -15,6 +15,7 @@ runtime config/mappings.vim
 runtime config/plugins.vim
 runtime config/auto.vim
 runtime config/command.vim
+runtime config/dict.vim
 filetype off
 
 "if g:KF#OS != 3

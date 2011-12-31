@@ -15,7 +15,7 @@ augroup filetypedetect
     let g:xml_use_xhtml = 1
 
     " Markdown
-    au BufNewFile,BufRead *.{md,mkd,mark,markdown} setf mkd
+    au BufNewFile,BufRead *.{md,mkd,mark,markdown} setf mkd | set ts=2 sw=2 expandtab
     au filetype html,mkd setlocal omnifunc=htmlcomplete#CompleteTags
 
     " Makefile
@@ -28,6 +28,7 @@ augroup filetypedetect
 
     " SH
     au BufNewFile,BufRead *.sh,.zshrc setf sh | set ts=2 sw=2 sts=2
+    au filetype sh call s:Dict('sh')
 
     " JavaScript, ECMAScript
     au BufNewFile,BufRead *.{js,javascript,es,jsx} setf javascript
@@ -50,7 +51,7 @@ augroup filetypedetect
     au BufNewFile,BufRead *.nginx setl ft=nginx
 
     " Vim
-    au BufNewFile,BufRead *.vim,{*}vimrc,{*}gvimrc setf vim 
+    au BufNewFile,BufRead *.vim,{*}vimrc,{*}gvimrc setf vim
     au BufWritePost .vimrc source $MYVIMRC
     au BufWritePost .gvimrc source ~/.gvimrc
 

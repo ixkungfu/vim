@@ -14,7 +14,6 @@ map <silent> <F11> :if &guioptions =~# 'T' <Bar>
 if g:KF#OS == 1
     set guioptions=cMg
 elseif g:KF#OS == 2
-
     set transparency=8
     set guifont=Monaco:h14
 

@@ -8,13 +8,16 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
+noremap / /\v
+noremap ? ?\v
+
 " Encoding
 noremap <silent> eu :set fenc=utf-8<cr>
-noremap <silent> ec :set fenc=cp932<cr>
+noremap <silent> ec :set fenc=cp936<cr>
 
 " Encode reopen Encoding
 noremap <silent> eru :e ++enc=utf-8 %<cr>
-noremap <silent> erc :e ++enc=cp932 %<cr>
+noremap <silent> erc :e ++enc=cp936 %<cr>
 
 " redraw map
 noremap <silent> sr :redraw!<cr>
@@ -29,7 +32,7 @@ vnoremap <leader>v "+p
 nnoremap <leader>a ggVG
 
 " Backspace in Visual mode deletes selection
-vnoremap <BS> d
+vnoremap <bs> d
 
 " Quickly edit/reload the vimrc file
 nnoremap <silent><leader>ev :tabedit $MYVIMRC<cr>
@@ -39,6 +42,7 @@ nnoremap <silent><leader>sv :source $MYVIMRC<cr>
 cmap w!! w !sudo tee % > /dev/null
 
 " Esc and Save
+imap jj <esc>
 inoremap <leader>, <esc>
 vnoremap <leader>, <esc>
 nnoremap <leader>q :q!<esc>
@@ -62,6 +66,7 @@ cnoremap <c-d> <del>
 " Cursor
 " <s-i> line begin and insert
 nnoremap L $
+nnoremap H ^
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
@@ -99,16 +104,21 @@ noremap <s-tab> v<
 vnoremap <tab> >gv
 vnoremap <s-tab> <gv
 
-" ListChar
-noremap <silent><F4> :set invlist<cr>
-
 " Line Number
 noremap <silent><F2> :if &nu\|se rnu\
             \|elsei &rnu\|se rnu!\
             \|el\|se nu\|endif<cr>
 
+" ListChar
+noremap <silent><F4> :set invlist<cr>
+
 " Trim trailling whitespace
 noremap <silent><F7> :%s/\s\+$//g<cr>``
 
 " normal: 3id, insert ddd. :help .
+
+map <leader>d o<esc>:r!date +'\%A, \%B \%d, \%Y'<cr>:r!date +'\%A, \%B \%d, \%Y' \| sed 's/./-/g'<cr>A<cr><esc>
+
+" Change charset by ,e
+noremap <silent><leader>ee :emenu Encoding.<tab>
 " "}}}
