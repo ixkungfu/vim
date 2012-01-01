@@ -14,7 +14,8 @@ if g:KFOS == 1
     set guioptions=cMg
 elseif g:KFOS == 2
     set transparency=8
-    set guifont=Monaco:h14
+    "set guifont=Monaco:h14
+    set guifont=Inconsolata:h15
 
 elseif g:KFOS == 3
     set guioptions=cMg
