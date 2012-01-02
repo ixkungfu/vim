@@ -73,5 +73,5 @@ augroup filetypedetect
 augroup END
 
 fun! s:Dict()
-    let &dictionary += substitute(g:KFMYVIM . '/dict/@.dict', '@', &filetype, '')
+    let &dictionary .= substitute(g:KFMYVIM . '/dict/@.dict', '@', &filetype, '')
 endfun
