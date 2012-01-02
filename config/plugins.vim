@@ -50,4 +50,7 @@ let Tlist_JS_Settings = 'javascript;s:string;a:array;o:object;f:function'
 let g:tagbar_ctags_bin = $HOME . "/develop/homebrew/bin/ctags"
 nnoremap <silent><F6> :TagbarToggle<cr>
 
+" RagTag
+let g:ragtag_global_maps = 1
+
 " }}}

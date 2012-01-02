@@ -23,16 +23,16 @@ augroup filetypedetect
 
     " PHP
     au BufNewFile,BufRead *.php setf php
-    au filetype php call s:Dict('php')
+    au filetype php call s:Dict()
     au filetype php setlocal omnifunc=phpcomplete#CompletePHP
 
     " SH
     au BufNewFile,BufRead *.sh,.zshrc setf sh | set ts=2 sw=2 sts=2
-    au filetype sh call s:Dict('sh')
+    au filetype sh call s:Dict()
 
     " JavaScript, ECMAScript
     au BufNewFile,BufRead *.{js,javascript,es,jsx} setf javascript
-    au filetype javascript call s:Dict('javascript')
+    au filetype javascript call s:Dict()
     au filetype javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
     " Lisp
@@ -72,6 +72,6 @@ augroup filetypedetect
 
 augroup END
 
-fun! s:Dict(ft)
-    let &dictionary = substitute(g:KFMYVIM . '/dict/@.dict', '@', a:ft, '')
+fun! s:Dict()
+    let &dictionary += substitute(g:KFMYVIM . '/dict/@.dict', '@', &filetype, '')
 endfun
