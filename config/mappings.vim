@@ -34,13 +34,15 @@ nnoremap <leader>v "+P
 vnoremap <leader>v "+p
 nnoremap <leader>a ggVG
 
-" copy current path
-nnoremap <leader>p :let @*=expand('%:p:h')<cr>
-
-" Mac OSX
-if g:KFOS == 2
-    vnoremap <leader>cc y:call system("pbcopy", getreg("\""))<cr>
-    nnoremap <leader>vv :call setreg("\"",system("pbpaste"))<cr>p
+if g:KFOS == 1 " Linux
+    " copy current path
+    nnoremap <silent><leader>p :let @* = expand('%:p')<cr>
+    nnoremap <leader>cp y:call system("xclip -i -selection clipboard", getreg("\""))<cr>:call system("xclip -i", getreg("\""))<cr>
+    nnoremap <leader>vv :call setreg("\"",system("xclip -o -selection clipboard"))<cr>p
+elseif g:KFOS == 2 " Max OXS pbcopy/pbpaste
+    nnoremap <silent><leader>p :call system('pbcopy', expand('%:p'))<cr>
+    vnoremap <leader>cp y:call system('pbcopy', getreg("\""))<cr>
+    nnoremap <leader>vv :call setreg("\"",system('pbpaste'))<cr>p
 endif
 
 " Backspace in Visual mode deletes selection
@@ -137,4 +139,5 @@ map <silent><leader>d o<esc>:r!date +'\%A, \%B \%d, \%Y'<cr>\
 
 " Change charset by ,ee
 noremap <silent><leader>ee :emenu Encoding.<tab>
+noremap <leader>eo :e <c-r>=expand('%:h').'/'<cr>
 " "}}}

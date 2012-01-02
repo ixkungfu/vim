@@ -54,14 +54,19 @@ augroup filetypedetect
     au BufNewFile,BufRead *.vim,{*}vimrc,{*}gvimrc setf vim
     au BufWritePost .vimrc source $MYVIMRC
     au BufWritePost .gvimrc source ~/.gvimrc
+    " shift+k, open vim help
+    au filetype vim setl keywordprg=:help
 
     " CSS
     au BufNewFile,BufRead *.css setf css
     au filetype css setlocal omnifunc=csscomplete#CompleteCSS
 
+    " Ruby
+    au BufNewFile,BufRead *.rb  setf ruby
+    au filetype ruby setlocal omnifunc=rubycomplete#Complete
+
     " Enable omni completion.
     au filetype python setlocal omnifunc=pythoncomplete#Complete
-    "au filetype ruby setlocal omnifunc=rubycomplete#Complete
     "au filetype sql setlocal omnifunc=sqlcomplete#Complete
     au filetype xml setlocal omnifunc=xmlcomplete#CompleteTags
 

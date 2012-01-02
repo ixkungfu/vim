@@ -32,6 +32,7 @@ set hlsearch
 set smartcase
 set incsearch
 set nowrapscan
+set gdefault
 
 set matchpairs+=<:>
 
@@ -78,6 +79,7 @@ set cursorline
 set colorcolumn=+1
 
 set wildmenu
+set wildignore=.DS_STORE
 set wildmode=longest:full,full
 set wildcharm=<tab>
 menu Encoding.utf-8 :e ++enc=utf-8<cr>
@@ -104,9 +106,10 @@ if &diff && has('cursorbind')
     set scrollbind
 endif
 
-set statusline=%1*%F%m%r%h%w
-set stl+=%2*%=(%{&ff}/%Y/%{&fenc})
-set stl+=%3*\ (line\ %l\/%L,\ col\ %c,\ 0x%04.4B)\ %P
+"set statusline=%1*%F%m%r%h%w
+"set stl+=%2*%=(%{&ff}/%Y/%{&fenc})
+"set stl+=%3*\ (line\ %l\/%L,\ col\ %c,\ 0x%04.4B)\ %P
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%{&fenc}\ %l,%c%)\ 0x%04.4B\ %P
 
 set foldenable
 set foldmethod=marker
@@ -142,6 +145,7 @@ set nrformats=octal,hex,alpha
 "set listchars+=trail:·
 "set listchars+=extends:»,precedes:«
 set listchars=tab:▸\ ,eol:¬
+set showbreak=↪ 
 set background=dark
 
 "blank-空白 buffers-缓冲区 curdir-当前目录 folds-折叠 help-帮助 options-选项
