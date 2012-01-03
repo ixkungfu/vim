@@ -15,6 +15,8 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:NERDTreeWinSize = 30
 nnoremap <silent><F8> :NERDTreeToggle<cr>
+" Nerd Tree (reveal current file)
+nnoremap <leader>f :NERDTree<cr>:NERDTreeClose<cr>:NERDTreeFind<cr>
 
 " NERDCommter
 if has("gui_macvim")

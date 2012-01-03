@@ -52,8 +52,8 @@ augroup filetypedetect
 
     " Vim
     au BufNewFile,BufRead *.vim,{*}vimrc,{*}gvimrc setf vim
-    au BufWritePost .vimrc source $MYVIMRC
-    au BufWritePost .gvimrc source ~/.gvimrc
+    au BufWritePost .vimrc source <afile>
+    au BufWritePost .gvimrc source <afile>
     " shift+k, open vim help
     au filetype vim setl keywordprg=:help
 
